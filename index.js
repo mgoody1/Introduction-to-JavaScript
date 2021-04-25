@@ -58,10 +58,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(num1, num2){
+    return num1 * num2;
   }
 
+console.log(multiply(2,2));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -73,10 +74,15 @@ Do the following:
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
+let humanYears = 5;
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears, num2) {
+  return humanYears * 7;
 }
+
+console.log(dogYears(humanYears,7));
+  
+
 
 
 
@@ -133,10 +139,43 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+var computer = Math.random();
+
+if (computer <= .33) {
+  computer = 'rock';
+} else if (computer <= .66) {
+  computer = 'paper';
+} else if (computer >= .66) {
+  computer = 'scissors';
+}
 
 function game(user, computer){
-    /*add your code here*/
+ if (user === computer) {
+   return "it's a tie";
+ }  
+  
+ else if (user === 'rock' && computer === 'paper') {
+   return "you lose!";
+ } else if (user === 'rock' && computer === 'scissors') {
+   return "you win!";
+ }
+  
+ else if (user === 'paper' && computer === 'rock') {
+   return "you win!";
+ } else if (user === 'paper' && computer === 'scissors'){ 
+   return "you lose!"; 
+ }
+
+else if (user === 'scissors' && computer === 'rock') {
+   return "you lose!";
+ } else if (user === 'scissors' && computer === 'paper'){ 
+   return "you win!"; 
+ }
+
+
 }
+
+console.log(game('paper',computer));
   
   
 
